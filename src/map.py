@@ -11,11 +11,12 @@ import string
 
 # input comes from STDIN (standard input)
 for line in sys.stdin:
-    line = line.strip()
-    words = line.split()
-    for word in words:
-	word = word.translate(None, string.punctuation).lower()
+	line = line.strip()
+	words = line.split()
+	for word in words:
+		word = word.translate(None, string.punctuation).lower()
+	
 	if word.strip() != "":
-       		# tab-delimited; the trivial word count is 1
-        	print '%s\t%s' % (word, 1)
+			# tab-delimited; the trivial word count is 1
+			print ('%s\t%s' % (word, 1))
 
